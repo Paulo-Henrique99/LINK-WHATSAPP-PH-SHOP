@@ -1,0 +1,183 @@
+body {
+  background-color: #fff8db;
+  background-image: 
+    url('https://www.transparenttextures.com/patterns/cubes.png');
+  
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  padding: 20px;
+  color: #111;
+}
+
+/* Logo */
+.logo img {
+  width: 150px;
+  margin-bottom: 8px;
+  filter: drop-shadow(0px 6px 12px rgba(0, 0, 0, 0.5));
+  transition: transform 0.2s ease;
+}
+
+.logo img:hover {
+  transform: translateY(-3px);
+}
+
+/* Título */
+h1 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+/* Slogan */
+.slogan {
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #facc15;
+}
+
+/* Descrição */
+.descricao {
+  max-width: 400px;
+  margin: auto;
+  margin-bottom: 20px;
+  line-height: 1.5;
+  color: #000000;
+}
+
+/* ========================= */
+/* CARROSSEL DE PRODUTOS */
+/* ========================= */
+
+.produtos-container {
+  overflow: hidden;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.produtos-scroll {
+  display: flex;
+  gap: 18px;
+  width: max-content;
+  animation: scrollX 65s linear infinite;
+  will-change: transform;
+}
+
+/* IMAGENS MAIORES */
+.produtos-scroll img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0px 8px 18px rgba(0,0,0,0.5);
+  transition: transform 0.3s ease;
+}
+
+/* efeito hover */
+.produtos-scroll img:hover {
+  transform: scale(1.08);
+}
+
+/* animação */
+@keyframes scrollX {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* ========================= */
+/* BOTÕES */
+/* ========================= */
+
+.botoes {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 320px;
+  margin: auto;
+}
+
+.botoes a {
+  padding: 13px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+  color: white;
+}
+
+.botoes a:hover {
+  transform: scale(1.05);
+}
+
+/* CORES */
+.instagram {
+  background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af);
+}
+
+.facebook {
+  background: #1877f2;
+}
+
+.tiktok {
+  background: #000;
+  border: 1px solid #25f4ee;
+}
+
+.mercadolivre {
+  background: #ffe600;
+  color: black !important;
+}
+
+.amazon {
+  background: #232f3e;
+}
+
+.shopee {
+  background: #ee4d2d;
+}
+
+.whatsapp {
+  background: #22c55e;
+  animation: pulse 1.5s infinite;
+
+  font-size: 20px;
+  padding: 16px 20px;
+  transform: scale(1.08);
+}
+
+/* animação botão */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.06); }
+  100% { transform: scale(1); }
+}
+
+/* Rodapé */
+.footer {
+  font-size: 12px;
+  margin-top: 25px;
+  opacity: 0.6;
+}
+
+/* ========================= */
+/* RESPONSIVO (MOBILE) */
+/* ========================= */
+
+@media (max-width: 600px) {
+  .produtos-scroll img {
+    width: 160px;
+    height: 160px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  .descricao {
+    font-size: 14px;
+  }
+}
